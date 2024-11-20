@@ -53,7 +53,7 @@ Durch einen Request werden die Daten dann berechnet und ausgegeben.
 ```html
 <!-- Man bekommt die Daten nach dem Submit in einem Request Array heraus -->
 <?php 
-    var_dumb($_REQUEST);
+    var_dump($_REQUEST);
 ?>
 ```
 
@@ -75,7 +75,7 @@ Hier wird auch durch hidden elemente eine Gesammtsumme der Menge und des Preises
 
 <!-- Durch diese Änderung ist das Request array dann das GET -->
 <?php 
-    var_dumb($_GET);
+    var_dump($_GET);
 ?>
 ```
 
@@ -101,6 +101,10 @@ phpinfo(); wird häufig für Debugging und zur Prüfung der Konfiguration verwen
 
 ### Wozu dienen folgende Optionen in der PHP.INI?
 
+- ***display_errors = On*** 
+  - PHP-Fehler ausgeben
+- ***ini_set('memory_limit', '256M')***
+  - Speichernutzung und die Laufzeit deiner Skripte limitieren
 - ***allow_url_fopen = off***
   - Funktion: Bestimmt, ob PHP Funktionen wie file_get_contents(), fopen(), oder include() erlaubt, auf entfernte URLs (z. B. http:// oder ftp://) zuzugreifen.
 - ***safe-mode = on***
